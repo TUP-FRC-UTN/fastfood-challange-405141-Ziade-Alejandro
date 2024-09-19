@@ -1,0 +1,14 @@
+
+<h4>Componente Point of Sell - POS</h4>
+<form class="my-2">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="nombre" placeholder="nombre" [(ngModel)]="nombre" name="name">
+    <label for="nombre">nombre</label>
+  </div>
+  <div class="form-floating my-3">
+    <input type="text" class="form-control" id="pedido" placeholder="pedido" [(ngModel)]="description" name="description">
+    <p>{{description}}</p>
+    <label for="pedido">Pedido</label>
+  </div>
+  <button type="submit" class="btn btn-primary"  (click)="ordenar()">Ordenar</button>
+</form>

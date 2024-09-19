@@ -1,0 +1,20 @@
+<h4>Componente Cocina</h4>
+<h5 class="mt-3">pendiente de cocinar</h5>
+<ul class="list-group my-5">
+  @for (plat of toCookList;track $index){
+    @if (freeOven){
+      <li>({{plat.number}}) - {{plat.description}}
+        <button class="btn btn-primary " (click)="toCook($index)" >Cocinar</button></li>
+    } @else {
+      <li>({{plat.number}}) - {{plat.description}}
+        <button class="btn btn-primary " disabled >Cocinar</button></li>
+    }
+  }
+</ul>
+<h5>pedidos en coccion</h5>
+<ul class="list-group my-5">
+  @for (plate of inCookList;track $index){
+    <li>({{plate.number}}) - {{plate.description}}</li>
+    <button class="btn btn-primary" (click)="toServe($index)" >Pedido Terminado</button>
+  }
+</ul>

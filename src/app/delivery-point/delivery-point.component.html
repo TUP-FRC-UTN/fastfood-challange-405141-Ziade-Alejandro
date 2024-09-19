@@ -1,0 +1,9 @@
+<p>Pedidos Ingresados</p>
+<p>{{deliveryList | json}}</p>
+<p>Pedidos listos para entregar</p>
+<ul class="list-group">
+  @for (plates of deliveryReady; track $index){
+    <li>({{plates.number}}) - {{plates.name}}
+      <button class="btn btn-primary" (click)="servido($index)">Entregar!</button></li>
+  }
+</ul>
